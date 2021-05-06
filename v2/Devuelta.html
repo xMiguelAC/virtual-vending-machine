@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+var importe=parseInt(prompt("Indica una cantidad: "));
+ 
+    document.write("<p>El cambio de la cantidad "+importe+"</p>");
+    
+    // indicamos todas las monedas posibles
+    var monedas=Array(500, 200, 100, 50, 20, 10, 5, 2, 1);
+    // var monedas=Array(500, 200, 100, 50, 25, 10, 5);
+    
+    // creamos un array con la misma cantidad de monedas
+    // Este array contendra las monedas a devolver
+    var cambio=Array(0,0,0,0,0,0,0);
+    
+    // Recorremos todas las monedas
+    for(var i=0; i<monedas.length; i++)
+    {
+    
+        // Si el importe actual, es superior a la moneda
+        if(importe>=monedas[i])
+        {
+    
+            // obtenemos cantidad de monedas
+            cambio[i]=parseInt(importe/monedas[i]);
+    
+            // actualizamos el valor del importe que nos queda por didivir
+            importe=importe-(cambio[i]*monedas[i]);
+        }
+    }
+    
+    // Bucle para mostrar el resultado
+    for(i=0; i<monedas.length; i++)
+    {
+        if(cambio[i]>0)
+        {
+            document.write("Hay: "+cambio[i]+" monedas de: "+monedas[i]+" &euro;<br>");
+        }
+    }
+
+
+
+    </script>
+</body>
+</html>

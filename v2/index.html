@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEV / DEV</title>
+</head>
+<body>
+
+    <style>ul{
+        /* display: flex;
+        flex-direction: column; */
+        column-count: 3;
+    }</style>
+
+    <center>
+        <h6><u>Maquina Expendedora Virtual</u></h6>
+    </center>
+
+    <h3>Estas son las monedas introducidas: <span id="account"></h3> 
+
+    <button id="MonedaFive" >Moneda de 5$</button>
+    <button id="MonedaTen" >Moneda de 10$</button>
+    <button id="MonedaTwentyFive" >Moneda de 25$</button>
+
+    <br>
+
+    <button id="PapeletaFifty" >Papeleta de 50$</button>
+    <button id="PapeletaHundred" >Papeleta de 100$</button>
+    <button id="PapeletaTwoHundred" >Papeleta de 200$</button>
+    <button id="PapeletaFiveHundred" >Papeleta de 500$</button>
+
+    <br>
+    <br>
+    <hr>
+        <div>
+            <ul id='list'>
+                
+            </ul>
+        </div>
+    <blockquote>
+        <input type="text" placeholder="digite el producto que desea..." id="inputkeyboard">
+        <button id="order">Pedir</button>
+        <button id="cancel">Devolver</button>
+    </blockquote>
+    <hr>
+
+    <span id="error"></span>
+    <h3><u>Despachado:</u> <span id="despacho">...</span></h3> 
+    <ul id="devueltaMsg"></ul>
+    <h4><u>Total:</u> <span id="total">...</span></h4> 
+
+    <script src="app.js"></script>
+</body>
+</html>
